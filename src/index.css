@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+ @layer components{
+    .bannerIcon{
+        @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex 
+        items-center justify-center rounded-md shadow hover:bg-opacity-40 
+        hover:-translate-y-1 transition-all hover:text-red-700 cursor-pointer duration-300;
+    }
+}
+  
