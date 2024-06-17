@@ -3,7 +3,6 @@ import Contact from "./components/contact/Contact";
 import Features from "./components/features/Features";
 import Footer from "./components/footer/Footer";
 import Footerbottom from "./components/footer/Footerbottom";
-import Main from "./components/main"
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Resume from "./components/resume/Resume";
