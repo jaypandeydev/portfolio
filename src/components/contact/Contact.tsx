@@ -13,7 +13,7 @@ const Contact = () => {
     const [successMsg, setSuccessMsg] = useState("");
 
     // ========== Email Validation start here ==============
-    const emailValidation = () => {
+    const emailValidation = (email) => {
         return String(email)
         .toLocaleLowerCase()
         .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);

@@ -39,7 +39,7 @@ const Testimonial = () => {
         nextArrow:<SampleNextArrow/>,
         prevArrow:<SamplePrevArrow />,
 
-        beforeChange:(prev,next) =>{
+        beforeChange:(next) =>{
             setDotActive(next)
         },
         appendDots: dots => (
