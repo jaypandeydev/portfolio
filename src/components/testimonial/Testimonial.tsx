@@ -84,7 +84,7 @@ const Testimonial = () => {
           )
     };
   return (
-    <section id="testimonial" className='w-full py-20 border-b-[ipx] border-b-black' >
+    <section id="testimonial" className='w-full py-20 border-b-[1px] border-b-black' >
     <div className="flex justify-center items-center text-center">
     <Title title="WHAT CLIENTS SAY" des= "Testimonial"/>
     </div>

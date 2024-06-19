@@ -6,7 +6,7 @@ import { SiProgress, SiAntdesign } from "react-icons/si";
 
 const Features = () => {
   return (
-    <section id="features" className='w-full pb-20 border-b-[1px] border-b-gray-600'>
+    <section id="features" className='w-full pb-20 pt-20 border-b-[1px] border-b-black'>
       <Title title="Features" des="What I do"/>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
       <Card title="Business Stratagy" 
