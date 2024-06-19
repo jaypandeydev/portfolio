@@ -1,5 +1,6 @@
+import { RiTwitterXLine } from "react-icons/ri";
 import { contactImg } from "../../assets/index"
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 const ContactLeft = () => {
   return (
     <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 
@@ -27,15 +28,22 @@ const ContactLeft = () => {
             Find me in
         </h2>
         <div className="flex gap-4">
-        <span className="bannerIcon">
-        <FaFacebookF/>
-        </span>
-        <span className="bannerIcon">
-        <FaTwitter />
-      </span>
-      <span className="bannerIcon">
-        <FaLinkedinIn />
-      </span>
+        <a href="https://www.facebook.com/jay.p.pandey.359/" target="_blank">
+            <span className="bannerIcon">
+              <FaFacebookF />
+            </span>
+            </a>
+            <a href="https://x.com/jaypandeyspeaks" target="_blank">
+            <span className="bannerIcon">
+            <RiTwitterXLine />
+            </span>
+            </a>
+            
+           <a href="https://www.linkedin.com/in/jppandey/" target="_blank">
+           <span className="bannerIcon">
+              <FaLinkedinIn />
+            </span>
+           </a>
         </div>
         </div>
     </div>

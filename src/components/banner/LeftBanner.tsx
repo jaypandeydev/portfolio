@@ -1,5 +1,6 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaReact } from "react-icons/fa";
+import { RiTwitterXLine } from "react-icons/ri";
 import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 
 const LeftBanner = () => {
@@ -37,15 +38,22 @@ const LeftBanner = () => {
             Find me in
           </h2>
           <div className="flex gap-4">
+            <a href="https://www.facebook.com/jay.p.pandey.359/" target="_blank">
             <span className="bannerIcon">
               <FaFacebookF />
             </span>
+            </a>
+            <a href="https://x.com/jaypandeyspeaks" target="_blank">
             <span className="bannerIcon">
-              <FaTwitter />
+            <RiTwitterXLine />
             </span>
-            <span className="bannerIcon">
+            </a>
+            
+           <a href="https://www.linkedin.com/in/jppandey/" target="_blank">
+           <span className="bannerIcon">
               <FaLinkedinIn />
             </span>
+           </a>
           </div>
         </div>
         <div>
