@@ -4,13 +4,15 @@ import {
   TbRobot,
   TbPrompt,
   TbPlugConnected,
+  TbCode,
+  TbInfinity,
 } from "react-icons/tb";
 
 /* ---------------------------------- Nav --------------------------------- */
 export const navLinks = [
   { id: "expertise", title: "Expertise", link: "expertise" },
   { id: "work", title: "Work", link: "work" },
-  { id: "toolkit", title: "Toolkit", link: "toolkit" },
+  { id: "stack", title: "Stack", link: "stack" },
   { id: "blog", title: "Blog", link: "blog" },
   { id: "contact", title: "Contact", link: "contact" },
 ];
@@ -63,6 +65,18 @@ export const expertise: Expertise[] = [
     desc: "Wiring large language models into real applications — APIs, context management and production-grade delivery across multiple model providers.",
     tags: ["APIs", "Context", "Production"],
   },
+  {
+    title: "Enterprise .NET Engineering",
+    icon: <TbCode />,
+    desc: "A long career in C#, .NET Core, ASP.NET and Azure Functions — with React, Angular and .NET MAUI on the front end — building systems businesses rely on.",
+    tags: [".NET Core", "C#", "Azure Functions"],
+  },
+  {
+    title: "DevOps & CI/CD",
+    icon: <TbInfinity />,
+    desc: "Automated build-test-deploy pipelines, containerized delivery, and workflow automation with n8n and Make — shipping changes safely and often.",
+    tags: ["CI/CD", "Docker", "Automation"],
+  },
 ];
 
 /* -------------------------------- Projects ------------------------------ */
@@ -112,21 +126,50 @@ export const projects: Project[] = [
   },
 ];
 
-/* -------------------------------- Toolkit ------------------------------- */
-/* TODO(jay): confirm tool names — "OpenClaw" and "Hermes Paperclip" were
-   taken verbatim from your brief; rename if those were typos. */
-export type Tool = {
-  name: string;
-  desc: string;
+/* --------------------------------- Stack -------------------------------- */
+/* TODO(jay): "OpenClaw" and "Hermes Paperclip" are kept verbatim from your
+   brief — rename if those were typos. */
+export type StackGroup = {
+  category: string;
+  items: string[];
 };
 
-export const toolkit: Tool[] = [
-  { name: "Claude", desc: "Primary model for reasoning, agents and prompt-engineered workflows." },
-  { name: "ChatGPT", desc: "GPT models for generation, automation and rapid prototyping." },
-  { name: "Gemini", desc: "Google's multimodal models for conversational and content tasks." },
-  { name: "Genspark", desc: "AI search and agentic workflows for research-heavy use cases." },
-  { name: "OpenClaw", desc: "Agent tooling for browser and computer-use automation." },
-  { name: "Hermes Paperclip", desc: "Workflow automation layer for connecting AI to real tasks." },
+export const stack: StackGroup[] = [
+  {
+    category: "Languages & Frameworks",
+    items: [
+      "C#",
+      ".NET Core",
+      "ASP.NET",
+      "Azure Functions",
+      "React",
+      "Angular",
+      ".NET MAUI",
+    ],
+  },
+  {
+    category: "AI & LLMs",
+    items: ["Claude", "ChatGPT", "Gemini", "Genspark", "OpenClaw", "Hermes Paperclip"],
+  },
+  {
+    category: "Automation",
+    items: ["n8n", "Make"],
+  },
+  {
+    category: "DevOps & Cloud",
+    items: ["Azure", "Docker", "GitHub Actions", "CI/CD Pipelines"],
+  },
+];
+
+/* ------------------------------- Industries ----------------------------- */
+export const industries = [
+  "ERP",
+  "Retail",
+  "Healthcare",
+  "Learning Management",
+  "Tourism",
+  "FinTech",
+  "Events",
 ];
 
 /* ---------------------------------- Blog -------------------------------- */

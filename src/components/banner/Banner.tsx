@@ -21,10 +21,11 @@ const Banner = () => {
               AI Engineer building <span className="text-accent">AI products</span> that ship.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-inkSoft mdl:text-lg">
-              I'm Jay Pandey, an AI engineer and AI expert — I lead teams while
-              staying hands-on, building retrieval-augmented (RAG) systems,
-              autonomous AI agents and LLM-powered workflows. Six products live
-              in production today.
+              I'm Jay Pandey — a senior .NET engineer and AI enthusiast. After
+              years building enterprise software in C#, .NET, React and Angular,
+              I now lead teams and build as a hands-on AI engineer: RAG systems,
+              autonomous agents and LLM-powered products. Six live in production
+              today.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">

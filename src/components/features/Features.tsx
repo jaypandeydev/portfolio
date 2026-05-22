@@ -1,5 +1,5 @@
 import Title from "../layouts/Title";
-import { expertise } from "../../constants";
+import { expertise, industries } from "../../constants";
 
 const Features = () => {
   return (
@@ -7,11 +7,11 @@ const Features = () => {
       <div className="container-px">
         <Title
           eyebrow="What I do"
-          title="AI engineering, end to end"
-          description="From grounding models in real data to shipping them as dependable products — the four areas I work in every day."
+          title="From enterprise .NET to production AI"
+          description="Years building software that businesses depend on — now channeled into shipping reliable, AI-powered products."
         />
 
-        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sml:grid-cols-2">
+        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sml:grid-cols-2 lgl:grid-cols-3">
           {expertise.map((item) => (
             <div
               key={item.title}
@@ -36,6 +36,22 @@ const Features = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted">
+            Industries I've delivered for
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {industries.map((industry) => (
+              <span
+                key={industry}
+                className="rounded-full border border-line px-3 py-1 text-sm text-inkSoft"
+              >
+                {industry}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
