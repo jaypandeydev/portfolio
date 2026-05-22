@@ -88,14 +88,11 @@ const Banner = () => {
           </div>
 
           <div className="lgl:w-2/5">
-            <div className="relative mx-auto w-56 sml:w-64 mdl:w-72">
-              <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border border-line" />
-              <img
-                src="/profilePhoto.jpg"
-                alt="Jay Pandey"
-                className="relative w-full rounded-2xl border border-line object-cover"
-              />
-            </div>
+            <img
+              src="/profilePhoto.jpg"
+              alt="Jay Pandey — AI Engineer and senior .NET developer"
+              className="mx-auto w-56 rounded-2xl border border-line object-cover sml:w-64 mdl:w-72"
+            />
           </div>
         </div>
 
