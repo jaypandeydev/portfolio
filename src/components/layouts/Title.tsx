@@ -1,15 +1,19 @@
+type TitleProps = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+};
 
-const Title = ({title, des}) => {
+const Title = ({ eyebrow, title, description }: TitleProps) => {
   return (
-    <div className="flex flex-col gap-4 font-serif mb-14">
-    <h3 className="text-sm uppercase font-light  text-rose-700 -tracking-wide">
-      {title}
-    </h3>
-    <h1 className="text-5xl text-gray-300 font-bold capitalize">
-      {des}
-    </h1>
+    <div className="max-w-2xl">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2 className="heading mt-3">{title}</h2>
+      {description && (
+        <p className="mt-4 text-base leading-relaxed text-inkSoft">{description}</p>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Title
+export default Title;

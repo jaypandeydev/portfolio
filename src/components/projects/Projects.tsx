@@ -1,57 +1,25 @@
-
-import Title from '../layouts/Title'
-import {projectOne,projectTwo, projectThree} from "../../assets/index";
-import ProjectsCard from './ProjectsCard'
+import Title from "../layouts/Title";
+import ProjectsCard from "./ProjectsCard";
+import { projects } from "../../constants";
 
 const Projects = () => {
   return (
-    <section id="projects" className='w-full py-20 border-b-[1px] border-black'>
-     <div className='flex justify-center items-center text-center'>
-     <Title
-      title="VISIT MY PORTFOLIO AND KEEP YOYR FEEDBACK"
-      des= "My Projects"
-      />
-     </div>
-     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <ProjectsCard
-          title="SOCIAL MEDIA CLONE"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectOne}
+    <section id="work" className="section border-t border-line bg-bgAlt">
+      <div className="container-px">
+        <Title
+          eyebrow="Selected work"
+          title="Six products, live in production"
+          description="Each of these is built, deployed and running today at vellmontservices.com."
         />
-        <ProjectsCard
-          title="E-commerce Website"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectTwo}
-        />
-        <ProjectsCard
-          title="Chatting App"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
-        />
-        <ProjectsCard
-          title="SOCIAL MEDIA CLONE"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
-        />
-        <ProjectsCard
-          title="E-commerce Website"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectOne}
-        />
-        <ProjectsCard
-          title="Chatting App"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectTwo}
-        />
+
+        <div className="mt-8 grid gap-5 sml:grid-cols-2 lgl:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectsCard key={project.title} index={index + 1} {...project} />
+          ))}
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

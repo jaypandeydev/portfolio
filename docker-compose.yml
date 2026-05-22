@@ -1,0 +1,16 @@
+# Runs on the Hostinger VPS. It only pulls the image built by GitHub Actions.
+# The container is bound to 127.0.0.1 so it is reachable only by the host's
+# Caddy, which terminates TLS and reverse-proxies jayppandey.com to it.
+# Port 8081 is used because 8080 is already taken by tutorra on this host.
+services:
+  portfolio:
+    image: ghcr.io/jaypandeydev/portfolio:latest
+    container_name: jayppandey-portfolio
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

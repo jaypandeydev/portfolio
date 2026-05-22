@@ -1,32 +1,38 @@
-import { BsGithub } from "react-icons/bs";
-import { FaGlobe } from "react-icons/fa";
-const ProjectsCard = ({title, des, src}) => {
-  return (
-    <div className="w-full p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow flex flex-col bg-gradient-to-r 
-    from-gray-900 to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 
-    transition-colors duration-1000">
-      <div className="w-full h-[80%] overflow-hidden rounded-lg">
-        <img className="w-full h-60 object-cover group-hover:scale-110 duration-300 cursor-pointer" src={src} alt="src" />
-      </div>
-      <div className="w-full mt-5 flex flex-col gap-6">
-      <div>
-      <div className="flex items-center justify-between" >
-      <h3 className="text-base uppercase text-designColor font-normal">{title}</h3>
-      <div className="flex gap-2">
-        <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-          <BsGithub />
-        </span>
-        <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-          <FaGlobe />
-        </span>
-      </div>      
-      </div>
-      <p className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">{des}</p>
-      </div>
-        
-      </div>
-    </div>
-  )
-}
+import { FiArrowUpRight } from "react-icons/fi";
+import type { Project } from "../../constants";
 
-export default ProjectsCard
+type ProjectsCardProps = Project & { index: number };
+
+const ProjectsCard = ({ title, desc, tags, live, index }: ProjectsCardProps) => {
+  return (
+    <a
+      href={live}
+      target="_blank"
+      rel="noreferrer"
+      className="group flex flex-col rounded-xl border border-line bg-bg p-6 transition-all duration-200 hover:-translate-y-1 hover:border-ink"
+    >
+      <div className="flex items-center justify-between">
+        <span className="text-xs font-medium text-muted">
+          {String(index).padStart(2, "0")}
+        </span>
+        <FiArrowUpRight className="text-lg text-muted transition-colors duration-200 group-hover:text-accent" />
+      </div>
+
+      <h3 className="mt-4 text-lg font-semibold text-ink">{title}</h3>
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-inkSoft">{desc}</p>
+
+      <div className="mt-5 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full bg-bgAlt px-2.5 py-1 text-xs text-inkSoft"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </a>
+  );
+};
+
+export default ProjectsCard;

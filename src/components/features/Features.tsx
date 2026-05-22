@@ -1,35 +1,45 @@
-import Title from "../layouts/Title"
-import Card from "./Card"
-import { AiFillAppstore } from "react-icons/ai";
-import { FaMobile, FaGlobe,FaBars } from "react-icons/fa";
-import { SiProgress, SiAntdesign } from "react-icons/si";
+import Title from "../layouts/Title";
+import { expertise } from "../../constants";
 
 const Features = () => {
   return (
-    <section id="features" className='w-full pb-20 pt-20 border-b-[1px] border-b-black'>
-      <Title title="Features" des="What I do"/>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
-      <Card title="Business Stratagy" 
-      des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad" 
-      icon={<FaBars/>} />
-      <Card title="App Development" 
-      des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad" 
-      icon={<AiFillAppstore/>} />
-      <Card title="SEO Optimisation" 
-      des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad" 
-      icon={<SiProgress/>} />
-      <Card title="Mobile Development" 
-      des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad" 
-      icon={<FaMobile/>} />
-      <Card title="UX Design" 
-      des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad" 
-      icon={<SiAntdesign/>} />
-      <Card title="Hosting Websites" 
-      des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad" 
-      icon={<FaGlobe/>} />
+    <section id="expertise" className="section border-t border-line">
+      <div className="container-px">
+        <Title
+          eyebrow="What I do"
+          title="AI engineering, end to end"
+          description="From grounding models in real data to shipping them as dependable products — the four areas I work in every day."
+        />
+
+        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sml:grid-cols-2">
+          {expertise.map((item) => (
+            <div
+              key={item.title}
+              className="bg-bg p-7 transition-colors duration-200 hover:bg-bgAlt"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-accentSoft text-xl text-accent">
+                {item.icon}
+              </span>
+              <h3 className="mt-5 text-lg font-semibold text-ink">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-inkSoft">
+                {item.desc}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {item.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-line px-2.5 py-1 text-xs text-inkSoft"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
